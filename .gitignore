@@ -1,0 +1,15 @@
+hh
+/taxi-model-pyspark/data/processed/yellow_2019_raw.parquet
+/taxi-model-pyspark/notebooks/.ipynb_checkpoints
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-01.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-02.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-03.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-04.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-05.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-06.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-07.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-08.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-09.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-10.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-11.csv
+taxi-model-pyspark/data/raw/yellow_tripdata_2019-12.csv
