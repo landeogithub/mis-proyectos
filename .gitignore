@@ -13,3 +13,5 @@ taxi-model-pyspark/data/raw/yellow_tripdata_2019-09.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-10.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-11.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-12.csv
+/.ipynb_checkpoints
+/taxi-model-pyspark/data/processed/yellow_2019_processed.parquet
