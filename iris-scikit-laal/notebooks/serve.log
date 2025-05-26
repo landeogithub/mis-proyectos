@@ -1,0 +1,26 @@
+nohup: ignoring input
+/opt/conda/lib/python3.8/site-packages/ray/util/client/worker.py:253: UserWarning: Ray Client connection timed out. Ensure that the Ray Client port on the head node is reachable from your local machine. See https://docs.ray.io/en/latest/cluster/ray-client.html#step-2-check-ports for more information.
+  warnings.warn(
+2025-05-26 20:36:26,454 - __main__ - ERROR - Error initializing Ray/Serve: ray client connection timeout
+Traceback (most recent call last):
+  File "init_rayserve.py", line 40, in <module>
+    init_ray_serve()
+  File "init_rayserve.py", line 29, in init_ray_serve
+    ray.init(address=f"ray://{GLOBAL_CONFIG['RAY_HEAD']}:{GLOBAL_CONFIG['RAY_PORT']}")
+  File "/opt/conda/lib/python3.8/site-packages/ray/_private/client_mode_hook.py", line 105, in wrapper
+    return func(*args, **kwargs)
+  File "/opt/conda/lib/python3.8/site-packages/ray/_private/worker.py", line 1255, in init
+    ctx = builder.connect()
+  File "/opt/conda/lib/python3.8/site-packages/ray/client_builder.py", line 182, in connect
+    client_info_dict = ray.util.client_connect.connect(
+  File "/opt/conda/lib/python3.8/site-packages/ray/util/client_connect.py", line 57, in connect
+    conn = ray.connect(
+  File "/opt/conda/lib/python3.8/site-packages/ray/util/client/__init__.py", line 252, in connect
+    conn = self.get_context().connect(*args, **kw_args)
+  File "/opt/conda/lib/python3.8/site-packages/ray/util/client/__init__.py", line 94, in connect
+    self.client_worker = Worker(
+  File "/opt/conda/lib/python3.8/site-packages/ray/util/client/worker.py", line 139, in __init__
+    self._connect_channel()
+  File "/opt/conda/lib/python3.8/site-packages/ray/util/client/worker.py", line 260, in _connect_channel
+    raise ConnectionError("ray client connection timeout")
+ConnectionError: ray client connection timeout
