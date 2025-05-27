@@ -1,3 +1,0 @@
-nohup: ignoring input
-2025-05-26 21:01:34,511 - /opt/conda/lib/python3.8/site-packages/ray/serve/_private/api.py - INFO - Connecting to existing Serve app in namespace "serve". New http options will not be applied.
-2025-05-26 21:01:34,514 - __main__ - INFO - Ray and Serve initialized successfully
