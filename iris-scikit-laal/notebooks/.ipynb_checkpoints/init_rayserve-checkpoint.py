@@ -17,7 +17,7 @@ logger = logging.getLogger(__name__)
 
 # --------------------- Global Configuration ---------------------
 GLOBAL_CONFIG = {
-    'RAY_HEAD': "localhost",
+    'RAY_HEAD': "ray-head",
     'RAY_PORT': "10001",
     'SERVE_HOST': "0.0.0.0",
     'SERVE_PORT': 8000,
