@@ -1,6 +1,4 @@
-hh
 /taxi-model-pyspark/data/processed/yellow_2019_raw.parquet
-/taxi-model-pyspark/notebooks/.ipynb_checkpoints
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-01.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-02.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-03.csv
@@ -15,3 +13,5 @@ taxi-model-pyspark/data/raw/yellow_tripdata_2019-11.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-12.csv
 **/.ipynb_checkpoints/
 /taxi-model-pyspark/data/processed/yellow_2019_processed.parquet
+iris-scikit-laal/notebooks/init_rayserve.log
+iris-scikit-laal/notebooks/serve.log
