@@ -17,3 +17,7 @@ taxi-model-pyspark/data/raw/yellow_tripdata_2019-12.csv
 /taxi-model-pyspark/data/processed/yellow_2019_processed.parquet
 heart-disease-model/data/processed/cardio_prepared.parquet
 heart-disease-model/data/processed/subset_data.parquet
+heart-disease-model/data/processed/DataSet.parquet
+heart-disease-model/data/processed/SubDataSet.parquet
+heart-disease-model/data/processed/Train.parquet
+heart-disease-model/data/processed/Validation.parquet
