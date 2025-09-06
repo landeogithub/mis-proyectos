@@ -2,6 +2,10 @@
 
 Este proyecto contiene múltiples componentes de análisis, transformación y modelamiento con Python.
 
+Python 3.12.8
+MlFlow 2.22.1
+Ray    2.41.0
+
 ---
 
 ## 🗂️ Estructura del Proyecto
