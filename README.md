@@ -14,10 +14,7 @@ Ray    2.41.0
 mi-proyecto/
 ├── data/               # Datos crudos y procesados
 ├── notebooks/          # Jupyter Notebooks
-├── src/                # Código fuente
-├── models/             # Modelos entrenados
-├── config/             # Parámetros y configuración
-├── reports/            # Resultados y visualizaciones
+├── scripts/                # Código fuente
 └── README.md           # Este archivo
 ```
 
