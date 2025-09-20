@@ -1,4 +1,6 @@
-hh
+**/.ipynb_checkpoints/
+**/__pycache__/
+
 /taxi-model-pyspark/data/processed/yellow_2019_raw.parquet
 /taxi-model-pyspark/notebooks/.ipynb_checkpoints
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-01.csv
@@ -13,11 +15,4 @@ taxi-model-pyspark/data/raw/yellow_tripdata_2019-09.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-10.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-11.csv
 taxi-model-pyspark/data/raw/yellow_tripdata_2019-12.csv
-**/.ipynb_checkpoints/
-/taxi-model-pyspark/data/processed/yellow_2019_processed.parquet
-heart-disease-model/data/processed/cardio_prepared.parquet
-heart-disease-model/data/processed/subset_data.parquet
-heart-disease-model/data/processed/DataSet.parquet
-heart-disease-model/data/processed/SubDataSet.parquet
-heart-disease-model/data/processed/Train.parquet
-heart-disease-model/data/processed/Validation.parquet
+taxi-model-pyspark/data/processed/yellow_2019_processed.parquet
