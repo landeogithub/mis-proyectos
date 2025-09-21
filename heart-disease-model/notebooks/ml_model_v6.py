@@ -100,14 +100,24 @@ class ModelRunner:
 
         test_sizes = [0.10, 0.15, 0.20]
 
-        # --- LOGISTIC REGRESSION (6) ---
         logistic_models = [
-            LogisticRegression(penalty="l2",        solver="lbfgs", C=0.25, max_iter=20000, tol=1e-6),
-            LogisticRegression(penalty="l2",        solver="lbfgs", C=1.0,  max_iter=30000, tol=1e-6),
-            LogisticRegression(penalty="l1",        solver="saga",  C=0.5,  max_iter=40000, tol=1e-6),
-            LogisticRegression(penalty="l1",        solver="saga",  C=1.0,  max_iter=40000, tol=1e-6),
-            LogisticRegression(penalty="elasticnet",solver="saga",  C=1.0,  l1_ratio=0.15, max_iter=40000, tol=1e-6),
-            LogisticRegression(penalty="elasticnet",solver="saga",  C=1.5,  l1_ratio=0.85, max_iter=30000, tol=1e-6),
+            LogisticRegression( penalty="l1", solver="liblinear", max_iter=40000),
+            LogisticRegression( penalty="l1", solver="saga", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="lbfgs", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="liblinear", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="newton-cg", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="newton-cholesky", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="sag", max_iter=40000),
+            LogisticRegression( penalty="l2", solver="saga", max_iter=40000),
+            LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,l1_ratio=0.25),
+            LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,l1_ratio=0.50),
+            LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,l1_ratio=0.75),
+            LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000),
+            LogisticRegression( penalty=None, solver="lbfgs", max_iter=40000),
+            LogisticRegression( penalty=None, solver="newton-cg", max_iter=40000),
+            LogisticRegression( penalty=None, solver="newton-cholesky", max_iter=40000),
+            LogisticRegression( penalty=None, solver="sag", max_iter=40000),
+            LogisticRegression( penalty=None, solver="saga", max_iter=40000),
         ]
         
         # --- RANDOM FOREST (6) ---
@@ -156,14 +166,30 @@ class ModelRunner:
         
         # --- DECISION TREE (6) ---
         dt_models = [
-            DecisionTreeClassifier(max_depth=None, criterion="gini",    min_samples_split=2,  min_samples_leaf=1,  max_features=None),
-            DecisionTreeClassifier(max_depth=24,   criterion="entropy", min_samples_split=5,  min_samples_leaf=2,  max_features="sqrt"),
-            DecisionTreeClassifier(max_depth=32,   criterion="gini",    min_samples_split=10, min_samples_leaf=2,  max_features="log2"),
-            DecisionTreeClassifier(max_depth=16,   criterion="gini",    min_samples_split=2,  min_samples_leaf=1,  max_features=0.8),
-            DecisionTreeClassifier(max_depth=None, criterion="entropy", min_samples_split=2,  min_samples_leaf=4,  max_features=None,
-                                   ccp_alpha=1e-4),
-            DecisionTreeClassifier(max_depth=20,   criterion="gini",    min_samples_split=5,  min_samples_leaf=2,  max_features="sqrt",
-                                   ccp_alpha=5e-4),
+            DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=45, max_features=None ),
+            DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=45, max_features=None ),
+            DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=45, max_features=None ),
+            DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=45, max_features=None ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=45, max_features=None ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=45, max_features=0.5 ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=45, max_features="sqrt" ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=45, max_features="log2" ),
+            DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=45, max_features=None )
         ]
         
         # --- GRADIENT BOOSTING (6) ---
@@ -187,6 +213,8 @@ class ModelRunner:
         ]
 
         modelos = logistic_models + rf_models + svc_models + mlp_models + dt_models + gb_models + ab_models
+
+        #modelos = dt_models
 
         combinaciones = [(m, ts) for m in modelos for ts in test_sizes]
 

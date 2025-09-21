@@ -33,4 +33,36 @@ logreg_models = [
     LogisticRegression( penalty=None, solver="saga", max_iter=40000),
 ]
 
+DecisionTreeClassifier(max_depth=None, criterion="gini",    min_samples_split=2,  min_samples_leaf=1,  max_features=None),
+
+divisor {“mejor”, “aleatorio”},
+
+DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="gini", splitter="best", max_depth=15, max_features=None )
+DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="gini", splitter="random", max_depth=15, max_features=None )
+
+DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="entropy", splitter="best", max_depth=15, max_features=None )
+DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="entropy", splitter="random", max_depth=15, max_features=None )
+
+
+DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="log_loss", splitter="best", max_depth=15, max_features=None )
+DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=15, max_features=0.5 )
+DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=15, max_features="sqrt" )
+DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=15, max_features="log2" )
+DecisionTreeClassifier( criterion="log_loss", splitter="random", max_depth=15, max_features=None )
+
 
