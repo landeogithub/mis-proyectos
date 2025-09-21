@@ -1,0 +1,36 @@
+LogisticRegression(penalty="l2",solver="lbfgs", C=0.25, max_iter=20000, tol=1e-6)
+
+{‘lbfgs’, ‘liblinear’, ‘newton-cg’, ‘newton-cholesky’, ‘sag’, ‘saga’},
+
+
+logreg_models = [
+    # --- penalty = "l1"
+    LogisticRegression( penalty="l1", solver="liblinear", max_iter=40000),
+    LogisticRegression( penalty="l1", solver="saga", max_iter=40000),
+
+    # --- penalty = "l2"
+    LogisticRegression( penalty="l2", solver="lbfgs", max_iter=40000),
+    LogisticRegression( penalty="l2", solver="liblinear", max_iter=40000),
+    LogisticRegression( penalty="l2", solver="newton-cg", max_iter=40000),
+    LogisticRegression( penalty="l2", solver="newton-cholesky", max_iter=40000),
+    LogisticRegression( penalty="l2", solver="sag", max_iter=40000),
+    LogisticRegression( penalty="l2", solver="saga", max_iter=40000),
+
+    # --- penalty = "elasticnet"
+    LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,
+                        l1_ratio=0.25),
+    LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,
+                        l1_ratio=0.50),
+    LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000,
+                        l1_ratio=0.75),
+    LogisticRegression( penalty="elasticnet", solver="saga", max_iter=40000),
+
+    # --- penalty = None
+    LogisticRegression( penalty=None, solver="lbfgs", max_iter=40000),
+    LogisticRegression( penalty=None, solver="newton-cg", max_iter=40000),
+    LogisticRegression( penalty=None, solver="newton-cholesky", max_iter=40000),
+    LogisticRegression( penalty=None, solver="sag", max_iter=40000),
+    LogisticRegression( penalty=None, solver="saga", max_iter=40000),
+]
+
+
