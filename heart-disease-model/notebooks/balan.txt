@@ -1,0 +1,9 @@
+df_train = data.sample( frac = 0.8 )
+df_test = data.drop(df_train.index)
+
+df_train['target'].value_counts()
+
+df_train_balan = df_train[df_train['target'] == 1].sample( n = 2675, replace = True )
+df_train = pd.concat([df_train, df_train_balan], ignore_index=True)
+
+df_train['target'].value_counts()
